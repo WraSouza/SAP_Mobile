@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:vm="clr-namespace:SAP_Mobile.ViewModels"
+             xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+			 x:Class="SAP_Mobile.Views.MainPage"
+			 x:DataType="vm:MainViewModel">
+
+    <Grid>
+
+        <VerticalStackLayout Padding="15">
+           
+            <Image Source="sapb1logo.png" HeightRequest="250"/>
+
+            <VerticalStackLayout>
+                
+                <Label Text="Company Name"/>
+
+                <material:TextField Text="LABORATÓIO TIARAJÚ E COSMÉTICOS S/A" IsEnabled="False" TextColor="Black"/>
+
+                <Label Text="User ID"  Margin="0,15,0,0"/>
+
+                <material:TextField TextColor="Black"/>
+
+                <Label Text="Password"  Margin="0,15,0,0"/>
+
+                <material:TextField IsPassword="True" />
+
+            </VerticalStackLayout>
+
+            <Button Text="OK" BackgroundColor="#38AEF8" Margin="0,100,0,0"/>
+
+        </VerticalStackLayout>
+        
+    </Grid>
+
+</ContentPage>

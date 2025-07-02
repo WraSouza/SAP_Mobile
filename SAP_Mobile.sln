@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.36105.23 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAP_Mobile", "SAP_Mobile\SAP_Mobile.csproj", "{5426BFCF-946A-761C-EB04-7722A9E6F012}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5426BFCF-946A-761C-EB04-7722A9E6F012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5426BFCF-946A-761C-EB04-7722A9E6F012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5426BFCF-946A-761C-EB04-7722A9E6F012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5426BFCF-946A-761C-EB04-7722A9E6F012}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2BC5FEA-52F4-4BEC-A97C-0B8953CF0F40}
+	EndGlobalSection
+EndGlobal

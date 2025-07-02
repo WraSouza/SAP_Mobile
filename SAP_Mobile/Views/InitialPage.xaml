@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SAP_Mobile.Views.InitialPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="InitialPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Image">
+                <Setter Property="HeightRequest" Value="50" />
+            </Style>
+
+            <Style TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+            </Style>
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+    <VerticalStackLayout>
+
+        <Image HeightRequest="250" Source="sapb1logo.png" />
+
+        <ScrollView>
+
+        <Grid ColumnDefinitions="*,*" RowDefinitions="auto,60,auto,60,auto,60,auto,60,auto">
+
+            <Image Grid.Column="0" Source="administrator.png" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Text="Administração" /> 
+
+            <Image Grid.Column="1" Source="bars.png" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="Finanças" />
+
+            <Image
+                Grid.Row="2"
+                Grid.Column="0"
+                Source="shoppingcart.png" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="0"
+                Text="Compras - C/P" />
+
+            <Image
+                Grid.Row="2"
+                Grid.Column="1"
+                Source="cooperation.png" />
+            <Label
+                Grid.Row="3"
+                Grid.Column="1"
+                Text="Parceiro de Negócios" />
+
+            <Image
+                Grid.Row="4"
+                Grid.Column="0"
+                Source="coin.png" />
+            <Label
+                Grid.Row="5"
+                Grid.Column="0"
+                Text="Banco" />
+
+            <Image
+                Grid.Row="4"
+                Grid.Column="1"
+                Source="readystock.png" />
+            <Label
+                Grid.Row="5"
+                Grid.Column="1"
+                Text="Estoque" />
+
+            <Image
+                Grid.Row="6"
+                Grid.Column="0"
+                Source="report.png" />
+            <Label
+                Grid.Row="7"
+                Grid.Column="0"
+                Text="Relatórios" />
+
+        </Grid>
+
+        </ScrollView>
+
+    </VerticalStackLayout>
+
+</ContentPage>
