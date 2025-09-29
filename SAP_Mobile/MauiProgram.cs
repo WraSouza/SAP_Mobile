@@ -1,4 +1,5 @@
-﻿using UraniumUI;
+﻿using SAP_Mobile.Repositories.Login;
+using UraniumUI;
 
 namespace SAP_Mobile;
 
@@ -27,7 +28,19 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 		builder.Services.AddSingleton<MainViewModel>();
+        builder.Services.AddSingleton<PNPageViewModel>();
 
-		return builder.Build();
+
+        builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddSingleton<InitialPage>();
+        builder.Services.AddSingleton<PNPage>();
+
+
+
+
+        builder.Services.AddSingleton<ILoginRepository, LoginRepository>();
+
+
+        return builder.Build();
 	}
 }

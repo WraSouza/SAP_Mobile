@@ -18,17 +18,17 @@
 
                 <material:TextField Text="LABORATÓIO TIARAJÚ E COSMÉTICOS S/A" IsEnabled="False" TextColor="Black"/>
 
-                <Label Text="User ID"  Margin="0,15,0,0"/>
+                <Label Text="User ID" Margin="0,15,0,0"/>
 
-                <material:TextField TextColor="Black"/>
+                <material:TextField Title="User ID" Text="{Binding UserName}" TextColor="Black"/>
 
                 <Label Text="Password"  Margin="0,15,0,0"/>
 
-                <material:TextField IsPassword="True" />
+                <material:TextField IsPassword="True" Text="{Binding Password}" />
 
             </VerticalStackLayout>
 
-            <Button Text="OK" BackgroundColor="#38AEF8" Margin="0,100,0,0"/>
+            <Button Text="OK" Command="{Binding LoginCommand}" BackgroundColor="#38AEF8" Margin="0,100,0,0"/>
 
         </VerticalStackLayout>
         

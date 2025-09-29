@@ -6,11 +6,12 @@
 	xmlns:local="clr-namespace:SAP_Mobile"
 	xmlns:views="clr-namespace:SAP_Mobile.Views"
     xmlns:view="clr-namespace:SAP_Mobile.Views"
+    Shell.NavBarIsVisible="False"
 	Title="SAP_Mobile">
     
 	<ShellContent
 		Title="Main"
-		ContentTemplate="{DataTemplate view:InitialPage}"
+		ContentTemplate="{DataTemplate view:MainPage}"
 		Route="MainPage"
 		Shell.NavBarIsVisible="False" />
 
