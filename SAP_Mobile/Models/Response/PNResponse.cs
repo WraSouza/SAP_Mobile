@@ -2,6 +2,15 @@
 {
     public class PNResponse
     {
+        public PNResponse()
+        {
+            
+        }
+        public PNResponse(List<Value> value)
+        {
+            this.value = value;
+        }
+
         // Root myDeserializedClass = JsonConvert.DeserializeObject<Root>(myJsonResponse);
         public string odatametadata { get; set; }
         public List<Value> value { get; set; }
@@ -9,37 +18,65 @@
 
         public class BusinessPartners
         {
-            public string CardCode { get; set; }
-            public string CardName { get; set; }
-            public string Phone1 { get; set; }
-            public string EmailAddress { get; set; }
+            public BusinessPartners()
+            {
+                
+            }
+            public BusinessPartners(string cardCode, string cardName, string phone1, string emailAddress)
+            {
+                this.cardCode = cardCode;
+                this.cardName = cardName;
+                this.phone1 = phone1;
+                this.emailAddress = emailAddress;
+            }
+
+            public string cardCode { get; set; }
+            public string cardName { get; set; }
+            public string phone1 { get; set; }
+            public string emailAddress { get; set; }
         }
 
         public class BusinessPartnersBPAddresses
         {
-            public string BPCode { get; set; }
-            public string Street { get; set; }
-            public string Block { get; set; }
-            public string ZipCode { get; set; }
-            public string City { get; set; }
-            public string State { get; set; }
-            public string StreetNo { get; set; }
+            public BusinessPartnersBPAddresses()
+            {
+                
+            }
+            public BusinessPartnersBPAddresses(string bPCode, string street, string block, string zipCode, string city, string state, string streetNo)
+            {
+                this.bPCode = bPCode;
+                this.street = street;
+                this.block = block;
+                this.zipCode = zipCode;
+                this.city = city;
+                this.state = state;
+                this.streetNo = streetNo;
+            }
+
+            public string bPCode { get; set; }
+            public string street { get; set; }
+            public string block { get; set; }
+            public string zipCode { get; set; }
+            public string city { get; set; }
+            public string state { get; set; }
+            public string streetNo { get; set; }
         }
 
         public class BusinessPartnersBPFiscalTaxIDCollection
         {
-            public string BPCode { get; set; }
-            public string TaxId1 { get; set; }
-            public string TaxId4 { get; set; }
-        }        
+            public BusinessPartnersBPFiscalTaxIDCollection()
+            {
+                
+            }
+            public BusinessPartnersBPFiscalTaxIDCollection(string bPCode, string taxId1)
+            {
+                this.bPCode = bPCode;
+                this.taxId1 = taxId1;               
+            }
 
-        public class Value
-        {
-            public BusinessPartners BusinessPartners { get; set; }            
-            public BusinessPartnersBPFiscalTaxIDCollection BusinessPartnersBPFiscalTaxIDCollection { get; set; }          
-            public BusinessPartnersBPAddresses BusinessPartnersBPAddresses { get; set; }
+            public string bPCode { get; set; }
+            public string taxId1 { get; set; }
+            public string taxId4 { get; set; }
         }
-
-
     }
 }

@@ -1,12 +1,35 @@
-﻿using SAP_Mobile.Models.Response;
+﻿using Flurl.Http;
+using SAP_Mobile.Helpers;
+using SAP_Mobile.Models.Response;
 
 namespace SAP_Mobile.Repositories.PN
 {
     public class PNRepository : IPNRepository
     {
-        public Task<List<PNResponse>> GetAllPNAsync()
+        public async Task<PNResponse> GetAllPNAsync()
         {
-            throw new NotImplementedException();
+            try
+            {
+                var response = await Sites.pNURL
+                    .WithOAuthBearerToken(await SessionHelper.GetTokenAsync())
+                    .GetAsync();
+
+                if (response.ResponseMessage.IsSuccessStatusCode)
+                {
+                    var content = await response.ResponseMessage.Content.ReadAsStringAsync();
+
+                    var pnResponse = JsonSerializer.Deserialize<PNResponse>(content);
+
+                    return pnResponse;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+
+            return new PNResponse();
         }
     }
 }

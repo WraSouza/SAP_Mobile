@@ -4,6 +4,6 @@ namespace SAP_Mobile.Repositories.PN
 {
     public interface IPNRepository
     {
-        Task<List<PNResponse>> GetAllPNAsync();
+        Task<PNResponse> GetAllPNAsync();
     }
 }

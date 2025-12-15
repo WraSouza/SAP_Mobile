@@ -3,7 +3,9 @@
     x:Class="SAP_Mobile.Views.InitialPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="InitialPage">
+    xmlns:mvvm="clr-namespace:SAP_Mobile.ViewModels"
+    Title="InitialPage"
+    x:DataType="mvvm:InitialPageViewModel">
 
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -21,7 +23,7 @@
 
     <VerticalStackLayout>
 
-        <Image HeightRequest="250" Source="sapb1logo.png" />
+        <Image HeightRequest="200" Source="sapb1logo.png" />
 
         <ScrollView>
 
@@ -48,10 +50,14 @@
                 Grid.Column="0"
                 Text="Compras - C/P" />
 
-            <Image
+                <Image
                 Grid.Row="2"
                 Grid.Column="1"
-                Source="cooperation.png" />
+                Source="cooperation.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding GoToPNPageCommand}"/>
+                    </Image.GestureRecognizers>
+                </Image>
             <Label
                 Grid.Row="3"
                 Grid.Column="1"

@@ -17,7 +17,7 @@ public partial class MainViewModel(ILoginRepository loginRepository) : BaseViewM
     string? password;
 
     [RelayCommand]
-    async void Login()
+    public async void Login()
     {
         var loginRequest = new LoginRequest(companyDB, userName, password);
 
@@ -33,6 +33,6 @@ public partial class MainViewModel(ILoginRepository loginRepository) : BaseViewM
 
         SessionHelper.SaveToken(result.sessionId, DateTime.Now.AddMinutes(30));       
 
-        await Shell.Current.GoToAsync(nameof(InitialPage));
+        await Shell.Current.GoToAsync($"//{nameof(InitialPage)}");
     }
 }
